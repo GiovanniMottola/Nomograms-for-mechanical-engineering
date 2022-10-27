@@ -1,14 +1,14 @@
 ##  DATE:    12/02/2021
 ##  AUTHOR:  GIOVANNI MOTTOLA
-#   per ripulire tutto all'avvio di uno script
-def pulizia():
+#   for cleaning up when starting a script
+def cleanup():
     try:
         from IPython import get_ipython
-        #   pulizia variabili
+        #   cleanup variables
         get_ipython().magic('reset -f')
-        #   pulizia finestra comandi
+        #   cleanup command window
         get_ipython().magic('clear')
-        #   chiudo finestre vecchie
+        #   close old windows
         plt.close( 'all' )
     except:
         pass
